@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sanamacha Rani Collection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+
+header{
+background:linear-gradient(90deg,#ff512f,#dd2476);
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+.subtitle{
+text-align:center;
+padding:10px;
+color:#ccc;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#1a1a1a;
+border-radius:15px;
+padding:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#ffd700;
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+}
+
+button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+footer{
+text-align:center;
+padding:15px;
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>Sanamacha Rani Collection</header>
+<div class="subtitle">Premium Traditional Manipuri Collection • Max Price ₹30,000</div>
+
+<div class="container">
+
+<div class="card">
+<img src="yellow.jpg">
+<h3>Luxury Yellow Traditional Cloth</h3>
+<div class="price">₹21,000</div>
+<button onclick="order('Luxury Yellow Traditional Cloth','21000')">Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="black.jpg">
+<h3>Classic Black Traditional Cloth</h3>
+<div class="price">₹7,599</div>
+<button onclick="order('Classic Black Traditional Cloth','7599')">Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="pink.jpg">
+<h3>Royal Pink Traditional Cloth</h3>
+<div class="price">₹27,000</div>
+<button onclick="order('Royal Pink Traditional Cloth','27000')">Order on WhatsApp</button>
+</div>
+
+</div>
+
+<footer>© 2026 Sanamacha Rani Collection</footer>
+
+<script>
+function order(product,price){
+let phone="916366305808";
+let message=`Hello, I want to order ${product} for ₹${price}`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank');
+}
+</script>
+
+</body>
+</html>
